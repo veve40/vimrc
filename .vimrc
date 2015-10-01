@@ -75,15 +75,20 @@ let g:airline_powerline_fonts = 1
 let g:EasyGrepFilesToExclude = "*.svn\*,*.git\*,error_log"
 
 " CtrlP configuration
+if has("unix")
+   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
+let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_working_path_mode = 'rw'
 let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-  \ }
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.svn$|\.phalcon|\.phpcomplete_extended|dump$|',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
+  \ 'dir':  '\.git$\|\.svn$|\.phalcon|\.phpcomplete_extended|dump$|',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
+
 let NERDTreeShowHidden = 1
 
 " GitGutter configuration
@@ -111,3 +116,4 @@ set writebackup
 " Lazy var dumps
 nmap <leader>v ivar_dump(); die;<esc>6hi
 imap <leader>v var_dump(); die;<esc>6hi
+
