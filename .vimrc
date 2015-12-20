@@ -34,9 +34,9 @@ Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 
-let mapleader = "à"
+let mapleader = ","
 map <F13> :tabe ~/.vimrc<cr>
-map <leader>è :NERDTreeToggle<cr>
+map <leader>m :NERDTreeToggle<cr>
 let g:EasyMotion_leader_key = '<Leader>' 
 set completeopt=longest,menuone
 
@@ -57,7 +57,7 @@ set background=dark
 colorscheme mochalatte
 
 " tagbar settings
-map <leader>ç :TagbarToggle<CR>
+map <leader>l :TagbarToggle<CR>
 
 " NeoCompleteEnable
 let g:neocomplete#enable_at_startup = 1
@@ -68,7 +68,7 @@ set number
 set tabstop=4
 set shiftwidth=4
 set synmaxcol=512
-set guifont=Monaco\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline\ Nerd\ Font\ Complete:h11
 set colorcolumn=120 
 let g:airline_powerline_fonts = 1
 
